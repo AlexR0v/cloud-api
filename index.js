@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const connectDB = require('./config/db')
 dotenv.config({ path: './config/config.env' })
 
-const PORT = process.env.PORT ?? 4000
+const PORT = process.env.PORT || 4000
 
 const app = express()
 
