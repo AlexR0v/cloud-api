@@ -1,15 +1,15 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
-const connectDB = require('../config/db')
+const connectDB = require('./config/db')
 dotenv.config({ path: './config/config.env' })
 
 const PORT = process.env.PORT ?? 4000
 
 const app = express()
 
-const auth = require('../routes/auth')
-const users = require('../routes/users')
+const auth = require('./routes/auth')
+const users = require('./routes/users')
 
 app.use(express.json())
 app.use('/api/v1/registration', auth)
